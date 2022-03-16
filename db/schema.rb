@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_16_110853) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_16_111728) do
   create_table "domain_countries", force: :cascade do |t|
     t.string "domain"
     t.string "country"
@@ -18,6 +18,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_16_110853) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["domain", "country"], name: "index_domain_countries_on_domain_and_country", unique: true
+  end
+
+  create_table "websites", force: :cascade do |t|
+    t.string "domain"
+    t.integer "num_external_links"
+    t.integer "num_internal_links"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["domain"], name: "index_websites_on_domain"
   end
 
 end
