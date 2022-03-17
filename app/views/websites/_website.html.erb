@@ -1,0 +1,11 @@
+<tr>
+  <td><%=website.id %></td>
+  <td><%=website.domain %></td>
+  <td><%=website.num_internal_links %></td>
+  <td><%=website.num_external_links %></td>
+  <td>
+    <% website.audience_geography.each do |country| %>
+      <%= country.country %> : <%= country.percentage %>
+    <% end %>
+  </td>
+</tr>
