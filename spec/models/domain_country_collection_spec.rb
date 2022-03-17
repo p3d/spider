@@ -8,7 +8,7 @@ RSpec.describe DomainCountryCollection, type: :model do
 
       domain_country_collection = DomainCountryCollection.new('example.com', html_node)
 
-      expect{domain_country_collection.save}.to change{DomainCountry.count}
+      expect{domain_country_collection.save}.to change{DomainCountry.count}.by(3)
     end
   end
 
