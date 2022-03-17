@@ -8,6 +8,7 @@ class DomainCountryCollection
   end
 
   def save
+    return if @html.nil?
     clear_old_data
 
     @html.xpath('ul/li').each do |country|
