@@ -25,7 +25,10 @@ class Crawler
     internal_links(@page)
     @external_links = external_links(@page)
 
-    Website.find_or_create_by(domain: @domain, num_internal_links: @internal_links.size, num_external_links: @external_links.size)
+    Website.find_or_create_by(domain: @domain) do |website|
+      website.num_internal_links = @internal_links.size
+      website.num_external_links = @external_links.size
+    end
   end
 
   private
@@ -39,7 +42,11 @@ class Crawler
       next if @internal_links.include?(link.href)
 
       @internal_links << link.href
-      next_page = link.click
+      begin
+        next_page = link.click
+      rescue Mechanize::ResponseCodeError => e
+        next
+      end
       next if next_page.links.empty?
 
       internal_links(next_page)
