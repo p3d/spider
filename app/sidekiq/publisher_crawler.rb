@@ -1,19 +1,13 @@
+# frozen_string_literal: true
+
+# Class to get the audience geography data for a domain and then crawl the home page of that domain to
+# count internal and external links
 class PublisherCrawler
   include Sidekiq::Job
 
   def perform(domain)
-    # get information from Alex.com for the domain
-    # this will craeate DomainCountry records
-    get_audience_geography(domain)
-    AudienceGeographyService.call(domain)
-    # then crawl the domain and determine how many internal and external links there are
-    # which will create or update a Domain record
-    crawl_domain(domain)
-  end
+    AudienceGeography.new(domain).call
 
-  def get_audience_geography(domain)
-  end
-
-  def crawl_domain(domain)
+    Crawler.new(domain).crawl
   end
 end
