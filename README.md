@@ -15,3 +15,21 @@ You can see a basic list of the Website and DomainCountry records at http://loca
 
 To run the tests type:
 `rspec spec`
+
+## Docker
+If you have docker installed you can use that to run the application rather than install the gems etc on you local machine.
+
+From the application root type:
+
+`make build`
+
+This will build the docker image
+
+Type:
+
+`make run-dev`
+
+This will run the rails application in development mode.
+
+Type:
+`make run-console` to run the rails console in development mode
