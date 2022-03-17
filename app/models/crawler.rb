@@ -6,6 +6,8 @@ require 'mechanize'
 class Crawler
   def initialize(domain)
     @domain = domain
+    @internal_links = []
+    @external_links = []
   end
 
   def crawl
@@ -19,7 +21,11 @@ class Crawler
       Rails.logger.debug("There was an error crawling the domain #{@domain}: #{e.message}")
       return false
     end
-    Website.find_or_create_by(domain: @domain, num_internal_links: internal_links.size, num_external_links: external_links.size)
+
+    internal_links(@page)
+    @external_links = external_links(@page)
+
+    Website.find_or_create_by(domain: @domain, num_internal_links: @internal_links.size, num_external_links: @external_links.size)
   end
 
   private
@@ -28,15 +34,23 @@ class Crawler
     [@domain, "www.#{@domain}", nil]
   end
 
-  def internal_links
-    prune_invalid_links(@page.links).select { |p| internal_hosts.include?(URI.parse(p.href).host) }
+  def internal_links(page)
+    prune_invalid_links(page.links).select { |p| internal_hosts.include?(URI.parse(p.href).host) }.each do |link|
+      next if @internal_links.include?(link.href)
+
+      @internal_links << link.href
+      next_page = link.click
+      next if next_page.links.empty?
+
+      internal_links(next_page)
+    end
   end
 
-  def external_links
-    prune_invalid_links(@page.links).reject { |p| internal_hosts.include?(URI.parse(p.href).host) }
+  def external_links(page)
+    prune_invalid_links(page.links).reject { |p| internal_hosts.include?(URI.parse(p.href).host) }
   end
 
-  def prune_invalid_links(links)    
+  def prune_invalid_links(links)
     links.select { |l| l.href.present? && l.href.match?(/^(http|https|\/)/) }
   end
 
