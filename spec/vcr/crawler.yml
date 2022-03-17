@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://p3d.co.uk/
+    uri: http://localhost:8000/
     body:
       encoding: US-ASCII
       string: ''
@@ -18,110 +18,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Host:
-      - p3d.co.uk
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - '300'
-  response:
-    status:
-      code: 301
-      message: Moved Permanently
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Thu, 17 Mar 2022 14:50:39 GMT
-      Content-Type:
-      - text/html
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Location:
-      - http://dfb2qtuj9g8tc.cloudfront.net.
-      Cache-Control:
-      - max-age=10800
-      Vary:
-      - Accept-Language
-    body:
-      encoding: UTF-8
-      string: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\"\n  \"http://www.w3.org/TR/html4/frameset.dtd\">\n\n<html>\n<head>\n<title>301
-        Moved Permanently</title>\n</head>\n\n<body>\n\t<h1>Moved Permanently</h1>\n\t<p>Object
-        moved permanently -- see URI list</h1>\n</body>\n\n</html>\n\n\n"
-  recorded_at: Thu, 17 Mar 2022 14:50:39 GMT
-- request:
-    method: get
-    uri: http://dfb2qtuj9g8tc.cloudfront.net/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Mechanize/2.8.4 Ruby/3.1.1p18 (http://github.com/sparklemotion/mechanize/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Host:
-      - dfb2qtuj9g8tc.cloudfront.net.
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - '300'
-  response:
-    status:
-      code: 301
-      message: Moved Permanently
-    headers:
-      Server:
-      - CloudFront
-      Date:
-      - Thu, 17 Mar 2022 14:50:39 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '183'
-      Connection:
-      - keep-alive
-      Location:
-      - https://dfb2qtuj9g8tc.cloudfront.net/
-      X-Cache:
-      - Redirect from cloudfront
-      Via:
-      - 1.1 666d579f2d35d088c1597f0bdc2238be.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - LHR61-P4
-      X-Amz-Cf-Id:
-      - OCXaXWFuczaIRZq63H32bNfa6J_kHb-LHSVsArFrvotHq30kgoMGRg==
-    body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
-        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>CloudFront</center>\r\n</body>\r\n</html>\r\n"
-  recorded_at: Thu, 17 Mar 2022 14:50:39 GMT
-- request:
-    method: get
-    uri: https://dfb2qtuj9g8tc.cloudfront.net/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Mechanize/2.8.4 Ruby/3.1.1p18 (http://github.com/sparklemotion/mechanize/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Host:
-      - dfb2qtuj9g8tc.cloudfront.net
+      - localhost:8000
       Connection:
       - keep-alive
       Keep-Alive:
@@ -131,108 +28,275 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - text/html
+      Vary:
+      - Origin
+      Accept-Ranges:
+      - bytes
       Content-Length:
-      - '6248'
+      - '170'
+      Last-Modified:
+      - Thu, 17 Mar 2022 15:58:36 GMT
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - text/html; charset=utf-8
+      Etag:
+      - W/"aa-17f989a3373"
+      Date:
+      - Thu, 17 Mar 2022 16:18:07 GMT
       Connection:
       - keep-alive
-      Last-Modified:
-      - Mon, 28 Feb 2022 17:36:40 GMT
-      Server:
-      - AmazonS3
-      Date:
-      - Thu, 17 Mar 2022 13:55:13 GMT
-      Etag:
-      - '"60692dfb66c5a34d4367ac5319e2d076"'
-      X-Cache:
-      - Hit from cloudfront
-      Via:
-      - 1.1 a838671c4988ec73af5a4e6a2e15bd9c.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - LHR61-P4
-      X-Amz-Cf-Id:
-      - 2bIaihj8bIclzazyTZbEG7E2AU5cAbHXT85lIAH7ZmwBOfRLeREHvg==
-      Age:
-      - '3327'
+      Keep-Alive:
+      - timeout=5
     body:
       encoding: UTF-8
-      string: "<!DOCTYPE HTML>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n
-        \   <title>P3D - Ruby on Rails consulting services</title>\n    <meta name=\"author\"
-        content=\"Paul Dalton\">\n    \n    <meta name=\"generator\" content=\"Nanoc
-        4.11.23\">\n\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"
-        integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\"
-        crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css\"
-        integrity=\"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp\"
-        crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"/stylesheet.css\">\n
-        \   <link rel=\"stylesheet\" href=\"/prism.css\">\n    <link rel=\"stylesheet\"
-        href=\"/prism-line-numbers.css\">\n\n    <script defer src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n
-        \   <script defer src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"
-        integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\"
-        crossorigin=\"anonymous\"></script>\n    <script src=\"/prism.js\"></script>\n
-        \   <script src=\"/prism-line-numbers.js\"></script>\n    <!-- <script src=\"https://cdn.usefathom.com/script.js\"
-        site=\"HGITWROK\" defer></script> -->\n\n    \n    <meta name=\"Description\"
-        content=\"Paul Dalton, Freelance Amazon Web Services and Ruby on Rails Developer\"
-        />\n    <meta name=\"Keywords\" content=\"paul dalton web developer brighton
-        freelance ruby on rails consultant maintenance aws cloud infrastructure\"
-        />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,
-        minimum-scale=1\">\n    \n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-61996316-1\"></script>\n
-        \   <script>\n      var host = window.location.hostname;\n      if(host !=
-        \"localhost\"){\n        window.dataLayer = window.dataLayer || [];\n        function
-        gtag(){dataLayer.push(arguments);}\n        gtag('js', new Date());\n\n        gtag('config',
-        'UA-61996316-1');\n      }\n      \n    </script>\n\n  </head>\n  <body>\n
-        \   <div class=\"container\">\n      <div class=\"jumbotron\">\n        <h1><a
-        href=\"/\">Ruby on Rails & AWS Serverless consulting</a></h1>\n      </div>\n
-        \     <nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n
-        \   <!-- Brand and toggle get grouped for better mobile display -->\n    <div
-        class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle
-        collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"
-        aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n
-        \       <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n
-        \       <span class=\"icon-bar\"></span>\n      </button>\n    </div>\n\n
-        \   <!-- Collect the nav links, forms, and other content for toggling -->\n
-        \   <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n
-        \     <ul class=\"nav navbar-nav\">\n        <li><a href=\"/maintenance_and_support\">Maintenance</a></li>\n
-        \       <li><a href=\"/ruby-on-rails-performance-consulting\">Slow site?</a></li>\n
-        \       <li><a href=\"/helpful-links\">Links</a></li>\n        <li><a href=\"/kb/index/\">Notes</a></li>\n
-        \       <li><a href=\"/design\">Design</a></li>\n      </ul>\n    </div><!--
-        /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n      <div
-        class=\"row\">\n  <div class=\"col-md-12 col-sm-12\">\n    <h2>Ruby on Rails
-        maintenance service</h2>\n    <p>Do you have a Ruby on rails website?</p>\n\n
-        \   <ul class='list-group'>\n      <li class='list-group-item'>Would you know
-        what to do if your website went down?</li>\n      <li class='list-group-item'>Is
-        your website up to date with the latest security patches?</li>\n      <li
-        class='list-group-item'>Do you have backups of your valuable data?</li>\n
-        \   </ul>\n    <p>\n      <a href=\"/why_update\">\n        Why should you
-        keep your Ruby on Rails site updated?\n      </a>\n    </p>\n    <p>If the
-        answer to any of these questions is no then you need my <a href=\"/maintenance_and_support\">maintenance
-        and support serivces</a>\n  </div>\n  <div class=\"col-md-12 col-sm-12\">\n
-        \   <h2>Ruby on Rails development</h2>\n    <p>\n      I have over twenty
-        years experience developing software for the internet and many successful
-        projects under my belt. \n    </p>\n    <p>Whether you want to build something
-        new or make changes to an existing application I would love to talk with you
-        about how I can help get your idea off paper and in front of your customers.</p>\n
-        \ </div>\n\n  <div class=\"col-md-12 col-sm-12\">\n    <h2>Recent work</h2>\n
-        \   <p><a href=\"/case-studies/payment-system-migration\">Payment system migration:
-        Datacash to Paypal to Stripe</a></p>\n    <p><a href=\"/case-studies/build-deploy-pipeline\">Create
-        a build and deploy pipeline using Docker, CircleCI and AWS container services</a></p>\n
-        \ </div>  \n\n  <div class=\"col-md-12 col-sm-12 article-links-container\">\n
-        \   <h2>Other writing</h2>\n    <ul class=\"list-group\">\n      <li class='list-group-item'>\n
-        \       <a href=\"/2020/07/08/cognito_custom_attributes\">Missing AWS Cognito
-        custom attributes</a>\n      </li>\n\n      <li class='list-group-item'>\n
-        \       When invalidating an AWS Cloudfront distributions, the <a href=\"/2020/08/28/create_cloudfront_invalidation_ruby_caller_reference_gotcha\">caller
-        reference must be unique</a>\n      </li>\n    </ul>\n  </div>\n</div>\n<div
-        class=\"row\">\n  <div class=\"col-md-12 col-sm-12\">\n    <p class=\"testimonial-container\">\n
-        \    <span class=\"testimonial-text\">\"Paul is a very <strong>reliable and
-        trustworthy partner</strong> supporting and updating Ruby on Rails based sites
-        for our clients.\"</span><br/>\n      <span class=\"testimonial-author\">-
-        M Buzza, MB Commerce</span>\n    </p>\n  </div>\n</div>\n<div class=\"row\">\n
-        \ <div class=\"col-md-12 col-sm-12\">\n    <div class=\"text-centre\">\n      <a
-        href=\"https://calendly.com/p3dltd/15min\">Book your free initial consultation
-        today</a>\n    </div>\n  </div>\n</div>\n\n      <div class=\"row\">\n  <div
-        class=\"col-md-12 contact-info\">\n    <h3>P3D LTD</h3>\n    <p>telephone:
-        <a href='tel:441273921464'>+44 07867 784162</a></p>\n    <p>email: <a href='mailto:
-        paul@p3d.co.uk'>paul@p3d.co.uk</a></p>\n    <p>twitter: <a href=\"http://twitter.com/p3d\">@p3d</a></p>\n
-        \ </div>\n</div>\n\n    </div>\n  </body>\n</html>\n"
-  recorded_at: Thu, 17 Mar 2022 14:50:39 GMT
+      string: |
+        <html>
+          <body>
+            <a href="/link1.html">Internal 1</a>
+            <a href="/link2.html">Internal 2</a>
+            <a href="https://www.google.co.uk">External 1</a>
+          </body>
+        </html>
+  recorded_at: Thu, 17 Mar 2022 16:18:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/link1.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.8.4 Ruby/3.1.1p18 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - localhost:8000
+      Referer:
+      - http://localhost:8000/
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '300'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '170'
+      Last-Modified:
+      - Thu, 17 Mar 2022 15:59:03 GMT
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - text/html; charset=utf-8
+      Etag:
+      - W/"aa-17f989a9b5a"
+      Date:
+      - Thu, 17 Mar 2022 16:18:07 GMT
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=5
+    body:
+      encoding: UTF-8
+      string: |
+        <html>
+          <body>
+            <a href="/link1.html">Internal 1</a>
+            <a href="/link2.html">Internal 2</a>
+            <a href="https://www.google.co.uk">External 1</a>
+          </body>
+        </html>
+  recorded_at: Thu, 17 Mar 2022 16:18:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/link2.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.8.4 Ruby/3.1.1p18 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - localhost:8000
+      Referer:
+      - http://localhost:8000/link1.html
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '300'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '75'
+      Last-Modified:
+      - Thu, 17 Mar 2022 16:01:07 GMT
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - text/html; charset=utf-8
+      Etag:
+      - W/"4b-17f989c802d"
+      Date:
+      - Thu, 17 Mar 2022 16:18:07 GMT
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=5
+    body:
+      encoding: UTF-8
+      string: |
+        <html>
+          <body>
+            <a href="/link3.html">Internal 3</a>
+          </body>
+        </html>
+  recorded_at: Thu, 17 Mar 2022 16:18:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/link3.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.8.4 Ruby/3.1.1p18 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - localhost:8000
+      Referer:
+      - http://localhost:8000/link2.html
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '300'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '75'
+      Last-Modified:
+      - Thu, 17 Mar 2022 16:01:28 GMT
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - text/html; charset=utf-8
+      Etag:
+      - W/"4b-17f989cd028"
+      Date:
+      - Thu, 17 Mar 2022 16:18:07 GMT
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=5
+    body:
+      encoding: UTF-8
+      string: |
+        <html>
+          <body>
+            <a href="/link4.html">Internal 4</a>
+          </body>
+        </html>
+  recorded_at: Thu, 17 Mar 2022 16:18:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/link4.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.8.4 Ruby/3.1.1p18 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - localhost:8000
+      Referer:
+      - http://localhost:8000/link3.html
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '300'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '170'
+      Last-Modified:
+      - Thu, 17 Mar 2022 16:01:14 GMT
+      Cache-Control:
+      - max-age=0
+      Content-Type:
+      - text/html; charset=utf-8
+      Etag:
+      - W/"aa-17f989c9a3d"
+      Date:
+      - Thu, 17 Mar 2022 16:18:07 GMT
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=5
+    body:
+      encoding: UTF-8
+      string: |
+        <html>
+          <body>
+            <a href="/link1.html">Internal 1</a>
+            <a href="/link2.html">Internal 2</a>
+            <a href="https://www.google.co.uk">External 1</a>
+          </body>
+        </html>
+  recorded_at: Thu, 17 Mar 2022 16:18:07 GMT
 recorded_with: VCR 6.1.0
