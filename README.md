@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application fetches audience geography data from alexa.com and then spiders the domain name, counting the number of internal and external links.
 
-Things you may want to cover:
+## How to use this application
+Download the source code.
+run `bundle install`
+run `rails c` to load the rails console.
+run `PublisherCrawler.new().perform([domain])` to crawl the domain
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
