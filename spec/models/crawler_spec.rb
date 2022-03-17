@@ -6,6 +6,9 @@ RSpec.describe Crawler, type: :model do
       domain = 'p3d.co.uk'
       VCR.use_cassette 'crawler' do
         expect{ Crawler.new(domain).crawl }.to change{ Website.count }.by(1)
+        website = Website.find_by(domain: domain)
+        expect(website.num_internal_links).to eq 12
+        expect(website.num_external_links).to eq 2
       end
     end
   end
